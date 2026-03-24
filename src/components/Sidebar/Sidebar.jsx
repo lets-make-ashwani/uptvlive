@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
 
-  // 🔥 Trending = most viewed
+  // 🔥 TRENDING (TOP VIEWS)
   const trendingNews = [...newsData]
     .sort((a, b) => b.views - a.views)
     .slice(0, 5);
 
-  // 🎥 Videos (example filter)
+  // 🎥 VIDEOS
   const videoNews = newsData
     .filter(item => item.type === "video")
     .slice(0, 3);

@@ -12,6 +12,49 @@ const img11 = "/images/labour-office-shift.jpg.jpeg";
 
 
 
+const videosData = [
+  {
+    id: 101,
+    title: "राहुल बच्चा सोनकर विधायक बिल्हौर कानपुर",
+    slug: "rahul-bachcha-sonkar-kanpur",
+    image: "https://img.youtube.com/vi/uwhGyAq600E/hqdefault.jpg",
+    videoUrl: "https://youtu.be/uwhGyAq600E",
+    views: "2.1k",
+    time: "3 घंटे पहले",
+    type: "video"
+  },
+  {
+    id: 102,
+    title: "कानपुर JCP विनोद कुमार सिंह का बयान",
+    slug: "kanpur-jcp-vinod-kumar-statement",
+    image: "https://img.youtube.com/vi/7jViZnE9ksA/hqdefault.jpg",
+    videoUrl: "https://youtu.be/7jViZnE9ksA",
+    views: "1.8k",
+    time: "4 घंटे पहले",
+    type: "video"
+  },
+  {
+    id: 103,
+    title: "कानपुर गैंगरेप की घटना को लेकर पुलिस: कमिश्नर का बयान",
+    slug: "kanpur-gangrape-police-statement",
+    image: "https://img.youtube.com/vi/E9xRCwoeI2s/hqdefault.jpg",
+    videoUrl: "https://youtu.be/E9xRCwoeI2s",
+    views: "3.5k",
+    time: "5 घंटे पहले",
+    type: "video"
+  },
+  {
+    id: 104,
+    title: "कानपुर ब्लास्ट के बाद एक्शन-ACP को हटाया",
+    slug: "kanpur-blast-acp-removed",
+    image: "https://img.youtube.com/vi/msrByXSBxBE/hqdefault.jpg",
+    videoUrl: "https://youtu.be/msrByXSBxBE",
+    views: "2.9k",
+    time: "6 घंटे पहले",
+    type: "video"
+  }
+];
+
 const newsData = [
   {
   id: 1,
@@ -343,6 +386,8 @@ SIT अब तक मुख्य आरोपी विनोद अग्र�
 फिलहाल विभागीय अधिकारी इस मामले पर खुलकर कुछ भी कहने से बच रहे हैं।
   `
 },
+
+
 
 
 ];

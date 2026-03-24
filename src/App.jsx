@@ -13,55 +13,54 @@ import CitySection from "./components/CitySection/CitySection";
 import SpecialSection from "./components/SpecialSection/SpecialSection";
 
 import Sidebar from "./components/Sidebar/Sidebar";
-import Trending from "./components/Trending/Trending";
-import WeatherWidget from "./components/WeatherWidget/WeatherWidget";
 
 import VideoSection from "./components/VideoSection/VideoSection";
 import Footer from "./components/Footer/Footer";
 
-// 👉 IMPORT ARTICLE PAGE
+// 👉 ARTICLE PAGE
 import ArticlePage from "./components/ArticlePage/ArticlePage";
+
+/* ================= HOME LAYOUT ================= */
 const HomeLayout = () => {
   return (
     <>
-      {/* TOP */}
+      {/* ===== TOP ===== */}
       <TopBar />
       <Header />
       <Navbar />
       <CityStrip />
       <BreakingNews />
 
-      {/* HERO */}
+      {/* ===== HERO ===== */}
       <Hero />
 
-      {/* MAIN CONTENT */}
+      {/* ===== MAIN ===== */}
       <div className="container">
         <div className="main-layout">
 
-          {/* LEFT */}
+          {/* LEFT CONTENT */}
           <div className="main-content">
             <NewsGrid />
             <CitySection />
             <SpecialSection />
           </div>
 
-          {/* RIGHT */}
+          {/* RIGHT SIDEBAR (ONLY ONE COMPONENT) */}
           <div className="right-sidebar">
             <Sidebar />
-            <Trending />
-            <WeatherWidget />
           </div>
 
         </div>
       </div>
 
-      {/* BOTTOM */}
+      {/* ===== BOTTOM ===== */}
       <VideoSection />
       <Footer />
     </>
   );
 };
 
+/* ================= APP ROUTES ================= */
 const App = () => {
   return (
     <BrowserRouter>
