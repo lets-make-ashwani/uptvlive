@@ -144,3 +144,43 @@
     font-size: 13px;
   }
 }
+
+/* ================================= */
+/* 📱 MOBILE (2 COLUMN FIX) */
+/* ================================= */
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr; /* first full width */
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  /* LEFT FULL WIDTH */
+  .footer-left {
+    text-align: center;
+  }
+
+  /* 🔥 MAKE RIGHT SIDE 2 COLUMN */
+  .footer-section {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* WRAP BOTH SECTIONS */
+  .footer-container > .footer-section {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  /* CENTER LOGO */
+  .footer-logo {
+    margin: auto;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
