@@ -1,18 +1,17 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../assets/logo.jpeg";
+
 function Footer() {
   return (
     <footer className="footer">
+
       <div className="footer-container">
 
-        {/* LEFT */}
+        {/* ===== LEFT ===== */}
         <div className="footer-left">
 
-          {/* ✅ IMAGE LOGO */}
-          <div className="logo">
-            <img src={logo} alt="UP TV LIVE" className="footer-logo" />
-          </div>
+          <img src={logo} alt="UP TV LIVE" className="footer-logo" />
 
           <p className="tagline">
             उत्तर प्रदेश की सबसे तेज़, सबसे विश्वसनीय हिंदी न्यूज़ वेबसाइट।
@@ -27,12 +26,13 @@ function Footer() {
             <span>▶</span>
           </div>
 
-          <p className="contact">📞 समाचार भेजें: +91 88888555555 </p>
+          <p className="contact">📞 समाचार भेजें: +91 88888555555</p>
           <p className="contact">📧 brandmate@uptvlive.com</p>
           <p className="contact">🏢 brandmate@uptvlive.com</p>
+
         </div>
 
-        {/* CATEGORY */}
+        {/* ===== CATEGORY ===== */}
         <div className="footer-section">
           <h3>विषय</h3>
           <ul>
@@ -49,7 +49,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* COMPANY */}
+        {/* ===== COMPANY ===== */}
         <div className="footer-section">
           <h3>कंपनी</h3>
           <ul>
@@ -60,7 +60,7 @@ function Footer() {
             <li>RSS Feed</li>
           </ul>
 
-          <h3 style={{ marginTop: "15px" }}>शहर</h3>
+          <h3 className="city-title">शहर</h3>
           <ul>
             <li>लखनऊ</li>
             <li>कानपुर</li>
@@ -72,10 +72,11 @@ function Footer() {
 
       </div>
 
-      {/* BOTTOM */}
+      {/* ===== BOTTOM ===== */}
       <div className="footer-bottom">
         © 2026 All Rights Reserved. Brandmate Digital
       </div>
+
     </footer>
   );
 }
