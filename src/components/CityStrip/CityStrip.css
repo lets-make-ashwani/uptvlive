@@ -1,0 +1,59 @@
+/* MAIN STRIP */
+.city-strip {
+  background: #e8eef9;
+  padding: 10px 0;
+}
+
+/* INNER */
+.city-strip-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LABEL */
+.city-strip-inner span:first-child {
+  font-family: Oswald;
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+/* CITY CHIP */
+.city-chip {
+  flex: 0 0 auto; /* ✅ important for sliding */
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.city-chip:hover {
+  background: #1a3c8b;
+  color: white;
+}
+
+.city-chip.active {
+  background: red;
+  color: white;
+  border-color: red;
+}
+
+/* 📱 MOBILE → SLIDING */
+@media (max-width: 600px) {
+  .city-strip-inner {
+    overflow-x: auto;          /* ✅ horizontal scroll */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+
+  /* hide scrollbar */
+  .city-strip-inner::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,92 @@
+/* HEADER */
+header {
+  background: white;
+  border-bottom: 3px solid var(--red);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo-text-up {
+  color: var(--red);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo-text-tv {
+  color: var(--blue);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header-search input {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.btn-subscribe {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  flex: auto;
+}
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.btn-yt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid red;
+  color: red;
+
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  background: transparent;
+
+  transition: 0.2s;
+}
+
+.btn-yt:hover {
+  background: red;
+  color: white;
+}
+
+/* YouTube Icon */
+.yt-icon {
+  font-size: 16px;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-search input {
+    width: 100%;
+  }
+}

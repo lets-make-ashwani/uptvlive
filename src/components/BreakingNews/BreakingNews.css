@@ -1,0 +1,7 @@
+
+.ticker-wrap{flex:1;overflow:hidden;position:relative}
+.ticker{display:flex;gap:0;animation:ticker 35s linear infinite;white-space:nowrap}
+.ticker:hover{animation-play-state:paused}
+.ticker-item{font-size:13px;padding:0 30px;display:flex;align-items:center;gap:8px}
+.ticker-sep{color:rgba(255,255,255,.4)}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}

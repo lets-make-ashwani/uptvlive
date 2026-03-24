@@ -1,0 +1,39 @@
+
+/* NAVBAR */
+nav {
+  background: var(--blue);
+}
+
+.nav-inner {
+  display: flex;
+  overflow-x: auto;
+}
+
+.nav-item {
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: var(--red);
+  color: white;
+}
+
+.ad-img {
+  width: 460px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+/* MOBILE SCROLL MENU */
+.navbar::-webkit-scrollbar {
+  display: none;
+}

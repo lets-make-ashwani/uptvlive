@@ -1,0 +1,21 @@
+
+/* TOPBAR */
+.topbar {
+  background: #000;
+  color: #ccc;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-links a {
+  margin-left: 15px;
+  color: #bbb;
+  text-decoration: none;
+}
+
