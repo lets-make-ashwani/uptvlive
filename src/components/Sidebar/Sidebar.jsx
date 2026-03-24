@@ -1,33 +1,58 @@
 import "./Sidebar.css";
+import newsData from "../../data/newsData";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+
+  // 🔥 Trending = most viewed
+  const trendingNews = [...newsData]
+    .sort((a, b) => b.views - a.views)
+    .slice(0, 5);
+
+  // 🎥 Videos (example filter)
+  const videoNews = newsData
+    .filter(item => item.type === "video")
+    .slice(0, 3);
+
   return (
     <div className="sidebar">
 
-      {/* 🔴 AD ZONE */}
+      {/* 🔴 AD */}
       <div className="ad-box">
-        <div className="ad-label">Advertisement — Zone B</div>
+        <div className="ad-label">Advertisement</div>
         <div className="ad-size">300×250</div>
-        <div className="ad-text">Premium Rectangle Ad</div>
       </div>
 
       {/* 🔥 TRENDING */}
       <div className="sidebar-section">
         <div className="sidebar-title">🔥 ट्रेंडिंग</div>
 
-        {[1,2,3,4,5].map((num) => (
-          <div className="numbered-card" key={num}>
-            <div className="num">{String(num).padStart(2, "0")}</div>
-            <div>
-              <div className="numbered-title">
-                कानपुर लैंबॉर्गिनी कांड — पूरी कहानी
+        {trendingNews.map((item, index) => (
+          <Link
+            to={`/article/${item.slug}`}
+            key={item.id}
+            className="numbered-link"
+          >
+            <div className="numbered-card">
+
+              <div className="num">
+                {String(index + 1).padStart(2, "0")}
               </div>
-              <div className="numbered-meta">
-                👁 24.5k • 2 घंटे पहले
+
+              <div>
+                <div className="numbered-title">
+                  {item.title}
+                </div>
+
+                <div className="numbered-meta">
+                  👁 {item.views} • {item.time}
+                </div>
               </div>
+
             </div>
-          </div>
+          </Link>
         ))}
+
       </div>
 
       {/* 🌦️ WEATHER */}
@@ -49,29 +74,35 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* 🔴 BIG AD */}
-      <div className="ad-box big">
-        <div className="ad-label">Zone D — Sticky Sidebar</div>
-        <div className="ad-size">300×600</div>
-        <div className="ad-text">Half Page Ad</div>
-      </div>
-
       {/* ▶️ VIDEOS */}
       <div className="sidebar-section">
         <div className="sidebar-title">▶️ Latest Videos</div>
 
-        {[1,2,3].map((item) => (
-          <div className="video-item" key={item}>
-            <div className="video-thumb">▶</div>
-            <div>
-              <div className="video-title">
-                महाशिवरात्रि LIVE: बाबा विश्वनाथ मंदिर में भव्य आरती
+        {videoNews.map((item) => (
+          <Link
+            to={`/article/${item.slug}`}
+            key={item.id}
+            className="video-link"
+          >
+            <div className="video-item">
+
+              <img
+                src={item.image}
+                alt={item.title}
+                className="video-thumb"
+              />
+
+              <div>
+                <div className="video-title">
+                  {item.title}
+                </div>
+                <div className="video-meta">
+                  {item.views} views • {item.time}
+                </div>
               </div>
-              <div className="video-meta">
-                2.1k views • 3 घंटे पहले
-              </div>
+
             </div>
-          </div>
+          </Link>
         ))}
 
         <div className="view-all">सभी वीडियो देखें →</div>

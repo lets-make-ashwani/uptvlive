@@ -1,19 +1,16 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 /* 🔴 ADS */
 .ad-box {
   background: #f9f9f9;
-  padding: 16px;
+  padding: 14px;
   text-align: center;
   border: 1px dashed #ddd;
-}
-
-.ad-box.big {
-  min-height: 300px;
+  border-radius: 6px;
 }
 
 .ad-label {
@@ -22,25 +19,26 @@
 }
 
 .ad-size {
-  font-size: 24px;
+  font-size: 20px;
   color: #ccc;
-}
-
-.ad-text {
-  font-size: 12px;
-  color: #bbb;
 }
 
 /* 🔥 TRENDING */
 .sidebar-section {
   background: #fff;
-  padding: 16px;
+  padding: 14px;
+  border-radius: 6px;
 }
 
 .sidebar-title {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+.numbered-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .numbered-card {
@@ -50,26 +48,34 @@
   border-bottom: 1px solid #eee;
 }
 
+.numbered-card:last-child {
+  border-bottom: none;
+}
+
 .num {
-  font-size: 18px;
-  color: #ccc;
+  font-size: 16px;
+  color: #bbb;
+  font-weight: bold;
 }
 
 .numbered-title {
   font-size: 13px;
   font-weight: 600;
+  line-height: 1.3;
 }
 
 .numbered-meta {
   font-size: 11px;
-  color: #666;
+  color: #777;
+  margin-top: 3px;
 }
 
 /* 🌦️ WEATHER */
 .weather-box {
   background: linear-gradient(135deg, #0B2A6B, #1A48A8);
   color: white;
-  padding: 16px;
+  padding: 14px;
+  border-radius: 6px;
 }
 
 .weather-main {
@@ -79,25 +85,30 @@
 }
 
 .temp {
-  font-size: 36px;
+  font-size: 34px;
 }
 
 .desc {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .range {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .weather-details {
   display: flex;
   gap: 12px;
-  margin-top: 10px;
-  font-size: 12px;
+  margin-top: 8px;
+  font-size: 11px;
 }
 
 /* ▶️ VIDEO */
+.video-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .video-item {
   display: flex;
   gap: 10px;
@@ -105,13 +116,10 @@
 }
 
 .video-thumb {
-  width: 70px;
-  height: 50px;
-  background: #222;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 80px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .video-title {
@@ -129,4 +137,27 @@
   font-size: 12px;
   color: red;
   cursor: pointer;
+}
+
+/* ================================= */
+/* 📱 MOBILE */
+/* ================================= */
+@media (max-width: 768px) {
+
+  .sidebar {
+    gap: 12px;
+  }
+
+  .numbered-title {
+    font-size: 12px;
+  }
+
+  .video-thumb {
+    width: 70px;
+    height: 50px;
+  }
+
+  .temp {
+    font-size: 28px;
+  }
 }

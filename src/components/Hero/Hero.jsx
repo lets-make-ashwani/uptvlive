@@ -5,11 +5,9 @@ import newsData from "../../data/newsData";
 
 const Hero = () => {
 
-  // 🔥 Main News
   const mainNews =
     newsData.find(item => item.isTop) || newsData[0];
 
-  // 🔥 Side News
   const sideNews = newsData
     .filter(item => item.id !== mainNews.id)
     .slice(0, 5);
@@ -17,39 +15,30 @@ const Hero = () => {
   return (
     <div className="container">
       <div className="hero">
+
         <div className="hero-grid">
 
-          {/* ===== MAIN HERO ===== */}
+          {/* MAIN */}
           <div className="hero-main">
-
-            {/* IMAGE */}
             <Link to={`/article/${mainNews.slug}`}>
               <img
                 src={mainNews.image}
                 alt={mainNews.title}
                 className="hero-img"
-                style={{ width: "100%", height: "420px", objectFit: "cover" }}
               />
             </Link>
 
-            {/* OVERLAY */}
             <div className="hero-overlay">
 
               <div className="hero-category">
                 <span className="tag">🔴 BREAKING</span>
-                <span className="tag tag-blue" style={{ marginLeft: "6px" }}>
+                <span className="tag tag-blue">
                   {mainNews.city}
                 </span>
               </div>
 
-              {/* TITLE */}
-              <Link
-                to={`/article/${mainNews.slug}`}
-                style={{ textDecoration: "none", color: "#fff" }}
-              >
-                <div className="hero-title">
-                  {mainNews.title}
-                </div>
+              <Link to={`/article/${mainNews.slug}`} className="hero-link">
+                <div className="hero-title">{mainNews.title}</div>
               </Link>
 
               <div className="hero-meta">
@@ -63,52 +52,30 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* ===== SIDE CARDS ===== */}
-          <div className="hero-side" style={{ background: "#fff", padding: "12px" }}>
+          {/* SIDE */}
+          <div className="hero-side">
 
-            {/* HEADER SAME AS UI */}
-            <div
-              style={{
-                fontFamily: "Oswald, sans-serif",
-                fontSize: "12px",
-                letterSpacing: ".5px",
-                color: "var(--muted)",
-                textTransform: "uppercase",
-                paddingBottom: "8px",
-                borderBottom: "2px solid var(--blue)",
-                marginBottom: "4px"
-              }}
-            >
+            <div className="hero-side-header">
               ताज़ा खबरें
             </div>
 
             {sideNews.map((item) => (
-              
               <Link
                 to={`/article/${item.slug}`}
                 key={item.id}
-                style={{ textDecoration: "none", color: "inherit" }}
+                className="side-link"
               >
                 <div className="side-card">
 
-                  {/* IMAGE */}
                   <img
                     src={item.image}
                     alt={item.title}
                     className="side-card-img"
-                    style={{ width: "90px", height: "65px", objectFit: "cover" }}
                   />
 
                   <div className="side-card-body">
 
-                    <span
-                      className="tag"
-                      style={{
-                        fontSize: "9px",
-                        padding: "1px 6px",
-                        marginBottom: "4px"
-                      }}
-                    >
+                    <span className="tag small-tag">
                       {item.city}
                     </span>
 
@@ -124,12 +91,12 @@ const Hero = () => {
 
                 </div>
               </Link>
-
             ))}
 
           </div>
 
         </div>
+
       </div>
     </div>
   );
