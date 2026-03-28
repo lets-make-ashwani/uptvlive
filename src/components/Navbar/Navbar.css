@@ -67,3 +67,23 @@ nav {
   text-decoration: none !important;
   color: white;
 }
+
+/* MOBILE NAVBAR */
+@media (max-width: 768px) {
+  .nav-inner {
+    overflow-x: auto;
+    gap: 5px;
+    padding: 5px 10px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+
+  .nav-divider {
+    display: none;
+  }
+}
+

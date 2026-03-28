@@ -32,7 +32,7 @@ const Header = () => {
           {/* BUTTONS */}
 
 
-          
+          ...
 
           <div className="social">
 

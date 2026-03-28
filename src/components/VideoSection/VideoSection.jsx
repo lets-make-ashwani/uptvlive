@@ -30,7 +30,7 @@ const VideoSection = () => {
 
         <div className="section-hdr">
           <div className="section-title">📺 न्यूज़ वीडियो</div>
-          <a href="#" className="view-all">सभी वीडियो →</a>
+          <a href="https://www.youtube.com/@UPtvLIVE1" className="view-all">सभी वीडियो →</a>
         </div>
 
         <div className="video-grid">

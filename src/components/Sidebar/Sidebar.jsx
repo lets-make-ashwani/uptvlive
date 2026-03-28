@@ -74,39 +74,6 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* ▶️ VIDEOS */}
-      <div className="sidebar-section">
-        <div className="sidebar-title">▶️ Latest Videos</div>
-
-        {videoNews.map((item) => (
-          <Link
-            to={`/article/${item.slug}`}
-            key={item.id}
-            className="video-link"
-          >
-            <div className="video-item">
-
-              <img
-                src={item.image}
-                alt={item.title}
-                className="video-thumb"
-              />
-
-              <div>
-                <div className="video-title">
-                  {item.title}
-                </div>
-                <div className="video-meta">
-                  {item.views} views • {item.time}
-                </div>
-              </div>
-
-            </div>
-          </Link>
-        ))}
-
-        <div className="view-all">सभी वीडियो देखें →</div>
-      </div>
 
     </div>
   );
