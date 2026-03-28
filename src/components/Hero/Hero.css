@@ -174,3 +174,19 @@
     font-size: 10px;
   }
 }
+
+/* FADE EFFECT */
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

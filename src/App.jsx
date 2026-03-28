@@ -1,51 +1,66 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// ===== COMMON =====
 import TopBar from "./components/TopBar/TopBar";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import CityStrip from "./components/CityStrip/CityStrip";
 import BreakingNews from "./components/BreakingNews/BreakingNews";
+import Footer from "./components/Footer/Footer";
 
+// ===== HOME ONLY =====
+import CityStrip from "./components/CityStrip/CityStrip";
+
+// ===== HOME COMPONENTS =====
 import Hero from "./components/Hero/Hero";
 import NewsGrid from "./components/NewsGrid/NewsGrid";
 import CitySection from "./components/CitySection/CitySection";
 import SpecialSection from "./components/SpecialSection/SpecialSection";
-
 import Sidebar from "./components/Sidebar/Sidebar";
-
 import VideoSection from "./components/VideoSection/VideoSection";
-import Footer from "./components/Footer/Footer";
 
-// 👉 ARTICLE PAGE
+// ===== PAGES =====
 import ArticlePage from "./components/ArticlePage/ArticlePage";
+import About from "./components/about/about";
+import Contact from "./components/Contact/Contact";
+import CityPage from "./components/CityPage/CityPage";
+
+/* ================= BASE LAYOUT ================= */
+const BaseLayout = ({ children }) => {
+  return (
+    <>
+      <TopBar />
+      <Header />
+      <Navbar />
+      <BreakingNews />
+
+      {children}
+
+      <Footer />
+    </>
+  );
+};
 
 /* ================= HOME LAYOUT ================= */
 const HomeLayout = () => {
   return (
-    <>
-      {/* ===== TOP ===== */}
-      <TopBar />
-      <Header />
-      <Navbar />
-      <CityStrip />
-      <BreakingNews />
+    <BaseLayout>
+      {/* ✅ Only Home gets CityStrip */}
 
-      {/* ===== HERO ===== */}
+
       <Hero />
 
-      {/* ===== MAIN ===== */}
       <div className="container">
         <div className="main-layout">
 
-          {/* LEFT CONTENT */}
+          {/* LEFT */}
           <div className="main-content">
             <NewsGrid />
             <CitySection />
             <SpecialSection />
           </div>
 
-          {/* RIGHT SIDEBAR (ONLY ONE COMPONENT) */}
+          {/* RIGHT */}
           <div className="right-sidebar">
             <Sidebar />
           </div>
@@ -53,14 +68,12 @@ const HomeLayout = () => {
         </div>
       </div>
 
-      {/* ===== BOTTOM ===== */}
       <VideoSection />
-      <Footer />
-    </>
+    </BaseLayout>
   );
 };
 
-/* ================= APP ROUTES ================= */
+/* ================= APP ================= */
 const App = () => {
   return (
     <BrowserRouter>
@@ -69,16 +82,43 @@ const App = () => {
         {/* 🏠 HOME */}
         <Route path="/" element={<HomeLayout />} />
 
-        {/* 📖 ARTICLE PAGE */}
+        {/* 📖 ARTICLE */}
         <Route
           path="/article/:slug"
           element={
-            <>
-              <Header />
-              <Navbar />
+            <BaseLayout>
               <ArticlePage />
-              <Footer />
-            </>
+            </BaseLayout>
+          }
+        />
+
+        {/* 🏙 CITY */}
+        <Route
+          path="/city/:city"
+          element={
+            <BaseLayout>
+              <CityPage />
+            </BaseLayout>
+          }
+        />
+
+        {/* ℹ️ ABOUT */}
+        <Route
+          path="/about"
+          element={
+            <BaseLayout>
+              <About />
+            </BaseLayout>
+          }
+        />
+
+        {/* 📞 CONTACT */}
+        <Route
+          path="/contact"
+          element={
+            <BaseLayout>
+              <Contact />
+            </BaseLayout>
           }
         />
 

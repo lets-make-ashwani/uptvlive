@@ -26,10 +26,7 @@ header {
   font-weight: bold;
 }
 
-.header-search input {
-  padding: 8px;
-  border: 1px solid #ddd;
-}
+
 
 .btn-subscribe {
   background: var(--red);
@@ -45,34 +42,23 @@ header {
   object-fit: contain;
 }
 
-.btn-yt {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  border: 1px solid red;
-  color: red;
-
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 500;
-
-  text-decoration: none;
+.social a {
+  width: 34px;
+  height: 34px;
+  
   background: transparent;
-
-  transition: 0.2s;
+  color: #db1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
-.btn-yt:hover {
-  background: red;
-  color: white;
+.social a:hover {
+  background: #db1e1e;
+  color: #fff;
 }
-
-/* YouTube Icon */
-.yt-icon {
-  font-size: 16px;
-}
-
 .header-main {
   display: flex;
   justify-content: space-between;
@@ -86,7 +72,41 @@ header {
     gap: 10px;
   }
 
-  .header-search input {
-    width: 100%;
-  }
+
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: #333;
+  background: #f2f2f2;
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+/* Brand Colors on Hover */
+.social-icons a:nth-child(1):hover {
+  color: #e1306c; /* Instagram */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #1877f2; /* Facebook */
+}
+
+.social-icons a:nth-child(3):hover {
+  color: #ff0000; /* YouTube */
+}
+
+.social-icons a:nth-child(4):hover {
+  color: #000; /* Twitter/X */
 }

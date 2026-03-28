@@ -1,31 +1,75 @@
-import "./CityStrip.css"
-const CityStrip = () => {
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./CityStrip.css";
+import newsData from "../../data/newsData";
+
+const cities = [
+  { name: "कानपुर", slug: "kanpur" },
+  { name: "लखनऊ", slug: "lucknow" },
+  { name: "अयोध्या", slug: "ayodhya" },
+  { name: "आगरा", slug: "agra" },
+  { name: "वाराणसी", slug: "varanasi" },
+  { name: "गोरखपुर", slug: "gorakhpur" },
+  { name: "प्रयागराज", slug: "prayagraj" },
+  { name: "गाज़ियाबाद", slug: "ghaziabad" }
+];
+
+const CitySection = () => {
+  const [activeCity, setActiveCity] = useState(cities[0]);
+
+  const cityNews = newsData
+    .filter(item => item.city === activeCity.name)
+    .slice(0, 6);
+
   return (
-    <div className="city-strip">
-      <div className="container">
-        <div className="city-strip-inner">
+    <div className="city-section">
 
-          <span style={{
-            fontFamily: "Oswald",
-            fontSize: "12px",
-            color: "var(--blue)",
-            padding: "4px 8px",
-            fontWeight: "600"
-          }}>
-            📍 शहर:
+      {/* TABS */}
+      <div className="city-tabs">
+        {cities.map((city) => (
+          <span
+            key={city.slug}
+            className={`city-tab ${activeCity.name === city.name ? "active" : ""}`}
+            onClick={() => setActiveCity(city)}
+          >
+            {city.name}
           </span>
-
-          <span className="city-chip active">लखनऊ</span>
-          <span className="city-chip">कानपुर</span>
-          <span className="city-chip">अयोध्या</span>
-          <span className="city-chip">आगरा</span>
-          <span className="city-chip">वाराणसी</span>
-          <span className="city-chip">गोरखपुर</span>
-
-        </div>
+        ))}
       </div>
+
+      {/* NEWS */}
+      <div className="city-grid">
+        {cityNews.map((item) => (
+          <Link
+            to={`/article/${item.slug}`}
+            key={item.id}
+            className="city-link"
+          >
+            <div className="list-card">
+
+              <img src={item.image} alt={item.title} className="list-img" />
+
+              <div className="list-card-body">
+                <div className="list-card-title">{item.title}</div>
+                <div className="list-card-meta">
+                  {item.city} • {item.time}
+                </div>
+              </div>
+
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* BUTTON */}
+      <div className="city-btn-wrap">
+        <Link to={`/city/${activeCity.slug}`} className="city-btn">
+          {activeCity.name} News →
+        </Link>
+      </div>
+
     </div>
   );
 };
 
-export default CityStrip;
+export default CitySection;

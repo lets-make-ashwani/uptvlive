@@ -1,27 +1,36 @@
 import "./TopBar.css";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
+
+  // 📅 Dynamic Date (English)
+  const formattedDate = new Date().toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+  });
+
   return (
     <div className="topbar">
       <div className="container">
         <div className="topbar-inner">
 
+          {/* LEFT - DATE */}
           <div className="topbar-date">
-            सोमवार, 02 मार्च 2026 | हिंदी न्यूज़ | उत्तर प्रदेश
+            {formattedDate} | Hindi News | Uttar Pradesh
           </div>
 
+          {/* RIGHT - LINKS */}
           <div className="topbar-links">
-            <a href="#">📧 न्यूज़लेटर</a>
-            <a href="#">📱 ऐप डाउनलोड</a>
-            <a href="#">📞 सम्पर्क</a>
-            <a href="#">हमारे बारे में</a>
-          </div>
 
-          <div className="topbar-social">
-            <a href="#">f</a>
-            <a href="#">𝕏</a>
-            <a href="#">📷</a>
-            <a href="#">▶</a>
+
+
+            <Link to="/contact">📞 Contact</Link>
+
+            {/* ✅ ABOUT PAGE LINK */}
+            <Link to="/about">About Us</Link>
+
           </div>
 
         </div>

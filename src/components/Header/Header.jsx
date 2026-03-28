@@ -1,5 +1,7 @@
 import "./Header.css";
 import logo from "../../assets/logo.jpeg";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 const Header = () => {
   return (
     <header>
@@ -25,21 +27,32 @@ const Header = () => {
             </div>
           </div>
 
-          {/* SEARCH */}
-          <div className="header-search">
-            <input type="text" placeholder="खोजें..." />
-          </div>
+
 
           {/* BUTTONS */}
-          <a
-            href="https://www.youtube.com/@UPtvLIVE1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-yt"
-          >
-            <span className="yt-icon">▶</span>
-            YouTube
-          </a>
+
+
+          
+
+          <div className="social">
+
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <FaFacebookF />
+            </a>
+
+            <a href="https://twitter.com" target="_blank" rel="noreferrer">
+              <FaXTwitter />
+            </a>
+
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <FaInstagram />
+            </a>
+
+            <a href="https://www.youtube.com/@UPtvLIVE1" target="_blank" rel="noreferrer">
+              <FaYoutube />
+            </a>
+
+          </div>
 
         </div>
       </div>

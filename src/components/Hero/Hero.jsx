@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 import newsData from "../../data/newsData";
 
 const Hero = () => {
 
-  const mainNews =
-    newsData.find(item => item.isTop) || newsData[0];
+  const [index, setIndex] = useState(0);
+
+  // 🔥 Auto Slide (every 4 sec)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) =>
+        prev === newsData.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const mainNews = newsData[index];
 
   const sideNews = newsData
-    .filter(item => item.id !== mainNews.id)
+    .filter((item) => item.id !== mainNews.id)
     .slice(0, 5);
 
   return (
@@ -18,13 +30,14 @@ const Hero = () => {
 
         <div className="hero-grid">
 
-          {/* MAIN */}
+          {/* MAIN SLIDER */}
           <div className="hero-main">
+
             <Link to={`/article/${mainNews.slug}`}>
               <img
                 src={mainNews.image}
                 alt={mainNews.title}
-                className="hero-img"
+                className="hero-img fade"
               />
             </Link>
 
@@ -38,7 +51,9 @@ const Hero = () => {
               </div>
 
               <Link to={`/article/${mainNews.slug}`} className="hero-link">
-                <div className="hero-title">{mainNews.title}</div>
+                <div className="hero-title">
+                  {mainNews.title}
+                </div>
               </Link>
 
               <div className="hero-meta">
@@ -56,7 +71,7 @@ const Hero = () => {
           <div className="hero-side">
 
             <div className="hero-side-header">
-              ताज़ा खबरें
+              Latest News
             </div>
 
             {sideNews.map((item) => (
