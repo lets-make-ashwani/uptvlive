@@ -1,7 +1,15 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../assets/logo.jpeg";
-import { FaFacebookF, FaInstagram, FaYoutube, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaEnvelope,
+  FaWhatsapp
+} from "react-icons/fa";
+
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -10,7 +18,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-        {/* LEFT */}
+        {/* ================= LEFT ================= */}
         <div className="footer-left">
 
           {/* LOGO */}
@@ -25,7 +33,7 @@ function Footer() {
             Latest news, live updates, and ground reports.
           </p>
 
-          {/* SOCIAL ICONS */}
+          {/* ================= SOCIAL ================= */}
           <div className="social">
 
             <a href="https://www.facebook.com/share/g/1F2hjHwfW4/" target="_blank" rel="noreferrer">
@@ -36,7 +44,7 @@ function Footer() {
               <FaXTwitter />
             </a>
 
-            <a href="https://www.instagram.com/uptvlive?igsh=ejA1ZzR1OGhwdjhm" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/uptvlive" target="_blank" rel="noreferrer">
               <FaInstagram />
             </a>
 
@@ -52,9 +60,20 @@ function Footer() {
               <FaEnvelope />
             </a>
 
+            {/* ✅ ARATT CUSTOM ICON */}
+            <a
+              href="https://aratt.ai/@uptvlive"
+              target="_blank"
+              rel="noreferrer"
+              title="Follow on Aratt"
+              className="aratt-icon"
+            >
+              <img src="/images/aratt.png" alt="Aratt" />
+            </a>
+
           </div>
 
-          {/* CONTACT */}
+          {/* ================= CONTACT ================= */}
           <div className="contact">
 
             <p>
@@ -62,7 +81,9 @@ function Footer() {
             </p>
 
             <p>
-              📧 <a href="mailto:editorpvnews@gmail.com">editorpvnews@gmail.com</a>
+              📧 <a href="mailto:editorpvnews@gmail.com">
+                editorpvnews@gmail.com
+              </a>
             </p>
 
             <p>
@@ -72,15 +93,16 @@ function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                UPTVLIVE Head Office,Gandhi Nagar, Kanpur Nagar, Uttar Pradesh | Pin Code:208002
+                UPTVLIVE Head Office, Gandhi Nagar, Kanpur Nagar,
+                Uttar Pradesh | Pin Code: 208002
               </a>
             </p>
 
           </div>
 
-        </div> {/* ✅ CLOSED footer-left */}
+        </div>
 
-        {/* CATEGORY */}
+        {/* ================= CATEGORIES ================= */}
         <div className="footer-section">
           <h3>Categories</h3>
           <ul>
@@ -97,7 +119,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* COMPANY */}
+        {/* ================= COMPANY ================= */}
         <div className="footer-section">
           <h3>Company</h3>
           <ul>
@@ -107,17 +129,17 @@ function Footer() {
 
           <h3 style={{ marginTop: "15px" }}>Cities</h3>
           <ul>
-            <li><Link to="/">Lucknow</Link></li>
-            <li><Link to="/">Kanpur</Link></li>
-            <li><Link to="/">Ayodhya</Link></li>
-            <li><Link to="/">Agra</Link></li>
-            <li><Link to="/">Varanasi</Link></li>
+            <li><Link to="/city/Lucknow">Lucknow</Link></li>
+            <li><Link to="/city/Kanpur">Kanpur</Link></li>
+            <li><Link to="/city/Ayodhya">Ayodhya</Link></li>
+            <li><Link to="/city/Agra">Agra</Link></li>
+            <li><Link to="/city/Varanasi">Varanasi</Link></li>
           </ul>
         </div>
 
       </div>
 
-      {/* BOTTOM */}
+      {/* ================= BOTTOM ================= */}
       <div className="footer-bottom">
         © 2026 All Rights Reserved. Brandmate Digital
       </div>

@@ -31,9 +31,6 @@ const Header = () => {
 
           {/* BUTTONS */}
 
-
-          ...
-
           <div className="social">
 
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
