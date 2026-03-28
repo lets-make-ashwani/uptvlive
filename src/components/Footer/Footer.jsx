@@ -7,7 +7,8 @@ import {
   FaInstagram,
   FaYoutube,
   FaEnvelope,
-  FaWhatsapp
+  FaWhatsapp,
+  FaLink
 } from "react-icons/fa";
 
 import { FaXTwitter } from "react-icons/fa6";
@@ -33,42 +34,69 @@ function Footer() {
             Latest news, live updates, and ground reports.
           </p>
 
-          {/* ================= SOCIAL ================= */}
+          {/* ================= SOCIAL ICONS ================= */}
           <div className="social">
 
-            <a href="https://www.facebook.com/share/g/1F2hjHwfW4/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/share/g/1F2hjHwfW4/"
+              target="_blank"
+              rel="noreferrer"
+              title="Facebook"
+            >
               <FaFacebookF />
             </a>
 
-            <a href="https://x.com/UPTV_BREAKING" target="_blank" rel="noreferrer">
+            <a
+              href="https://x.com/UPTV_BREAKING"
+              target="_blank"
+              rel="noreferrer"
+              title="Twitter / X"
+            >
               <FaXTwitter />
             </a>
 
-            <a href="https://www.instagram.com/uptvlive" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/uptvlive?igsh=ejA1ZzR1OGhwdjhm"
+              target="_blank"
+              rel="noreferrer"
+              title="Instagram"
+            >
               <FaInstagram />
             </a>
 
-            <a href="https://www.youtube.com/@UPtvLIVE1" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.youtube.com/@UPtvLIVE1"
+              target="_blank"
+              rel="noreferrer"
+              title="YouTube"
+            >
               <FaYoutube />
             </a>
 
-            <a href="https://whatsapp.com/channel/0029VaA2qZEDTkK9Rx1evr3z" target="_blank" rel="noreferrer">
+            <a
+              href="https://whatsapp.com/channel/0029VaA2qZEDTkK9Rx1evr3z"
+              target="_blank"
+              rel="noreferrer"
+              title="WhatsApp Channel"
+            >
               <FaWhatsapp />
             </a>
 
-            <a href="mailto:editorpvnews@gmail.com">
+            <a
+              href="mailto:editorpvnews@gmail.com"
+              title="Email"
+            >
               <FaEnvelope />
             </a>
 
-            {/* ✅ ARATT CUSTOM ICON */}
+            {/* ✅ ARATT LINK */}
             <a
               href="https://aratt.ai/@uptvlive"
               target="_blank"
               rel="noreferrer"
               title="Follow on Aratt"
-              className="aratt-icon"
             >
-              <img src="/images/aratt.png" alt="Aratt" />
+              <FaLink />
             </a>
 
           </div>
@@ -77,11 +105,15 @@ function Footer() {
           <div className="contact">
 
             <p>
-              📞 <a href="tel:+919335690008">+91 9335690008</a>
+              📞{" "}
+              <a href="tel:+919335690008">
+                +91 9335690008
+              </a>
             </p>
 
             <p>
-              📧 <a href="mailto:editorpvnews@gmail.com">
+              📧{" "}
+              <a href="mailto:editorpvnews@gmail.com">
                 editorpvnews@gmail.com
               </a>
             </p>
