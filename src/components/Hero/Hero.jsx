@@ -13,7 +13,7 @@ const Hero = () => {
       setIndex((prev) =>
         prev === newsData.length - 1 ? 0 : prev + 1
       );
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

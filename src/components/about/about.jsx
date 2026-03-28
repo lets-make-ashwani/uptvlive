@@ -14,26 +14,27 @@ const About = () => {
 
         {/* INTRO */}
         <p>
-          UPtvLIVE एक प्रमुख हिंदी डिजिटल न्यूज़ पोर्टल है जो उत्तरप्रदेश की ताज़ा खबरें,
-          राजनीति, अपराध, शिक्षा, रोजगार और समाज से जुड़ी हर महत्वपूर्ण जानकारी तेजी और
-          विश्वसनीयता के साथ पाठकों तक पहुंचाता है।
+          UPtvLIVE is a leading Hindi digital news portal that delivers the latest
+          news from Uttar Pradesh including politics, crime, education, employment,
+          and social issues with speed and reliability.
         </p>
 
         <p>
-          जहां कृष्ण और राम की जन्मभूमि है, जहां शिव की अविनाशी काशी है, जहां बुद्ध के
-          महापरिनिर्वाण का कुशीनगर है, जहां मुगलों के साम्राज्य के निशान आज भी मौजूद हैं,
-          और जो भूमि देश को 9 प्रधानमंत्री दे चुकी है ऐसा है हमारा उत्तर प्रदेश और इसी
-          उत्तर प्रदेश की खबरों का नया ठिकाना है uptvlive.com।
+          Uttar Pradesh is a land of rich history and culture — the birthplace of
+          Lord Krishna and Lord Ram, the sacred city of Kashi, the place of Buddha’s
+          Mahaparinirvana in Kushinagar, and a region that has given India nine Prime Ministers.
+          UPtvLIVE brings you closer to every corner of this dynamic state.
         </p>
 
         <p>
-          हम पहुंचेंगे गांव गांव तक, राजनीति की हर हलचल तक अब नहीं छूटेगी यूपी की कोई खबर
-          क्योंकि आपके मोबाइल में होगा UPtvLIVE।
+          Our mission is to reach every village and every political movement so that
+          no important news from Uttar Pradesh is missed. With UPtvLIVE, news is always
+          in your hands.
         </p>
 
         <p>
-          uptvlive.com का उद्देश्य उत्तर प्रदेश की हर छोटी बड़ी खबर को सबसे पहले और सटीक
-          तरीके से लोगों तक पहुंचाना है।
+          The goal of uptvlive.com is to deliver every small and big news from Uttar Pradesh
+          first and with accuracy.
         </p>
 
         {/* OWNER SECTION */}
@@ -46,7 +47,7 @@ const About = () => {
           />
 
           <div className="owner-info">
-            <h3>अभय त्रिपाठी (Abhay Tripathi)</h3>
+            <h3>Abhay Tripathi</h3>
             <p>Chairman, MD & Editor-in-Chief, UPtvLIVE</p>
           </div>
 
@@ -56,40 +57,41 @@ const About = () => {
         <div className="owner-details">
 
           <p>
-            अभय त्रिपाठी एक भारतीय पत्रकार, लेखक और मीडिया उद्यमी हैं, जो ‘यूपीटीवी लाइव (UPtvLIVE)’ के
-            चेयरमैन, मैनेजिंग डायरेक्टर (MD) एवं एडिटर-इन-चीफ के रूप में कार्यरत हैं। वे हिंदी मीडिया जगत
-            में एक सक्रिय और प्रभावशाली नाम माने जाते हैं।
+            Abhay Tripathi is an Indian journalist, author, and media entrepreneur,
+            serving as the Chairman, Managing Director (MD), and Editor-in-Chief of UPtvLIVE.
+            He is recognized as an active and influential name in Hindi media.
           </p>
 
           <p>
-            उन्होंने अपने करियर के दौरान Ptv India, मेधाज न्यूज़, Kashish News,
-            Parikrama Vichardhara और Naxatra News जैसे प्रतिष्ठित मीडिया संस्थानों में कार्य किया,
-            जहां उन्होंने रिपोर्टिंग, संपादन और कंटेंट लीडरशिप में महत्वपूर्ण भूमिका निभाई।
+            During his career, he has worked with reputed media organizations such as
+            Ptv India, Medhaj News, Kashish News, Parikrama Vichardhara, and Naxatra News,
+            where he played key roles in reporting, editing, and content leadership.
           </p>
 
           <p>
-            साल 2018 में अभय त्रिपाठी ने अपना स्वतंत्र डिजिटल मीडिया प्लेटफॉर्म ‘UPtvLIVE’ शुरू किया,
-            जिसका उद्देश्य निष्पक्ष, जनसरोकार से जुड़ी और तथ्यपरक पत्रकारिता को बढ़ावा देना है।
+            In 2018, Abhay Tripathi launched his independent digital media platform,
+            UPtvLIVE, with the aim of promoting unbiased, public-interest-driven, and factual journalism.
           </p>
 
-          <h2>मुख्य तथ्य</h2>
+          <h2>Key Facts</h2>
           <ul>
-            <li><strong>पद:</strong> चेयरमैन, एमडी एवं एडिटर-इन-चीफ, UPtvLIVE</li>
-            <li><strong>जन्म:</strong> 17 सितम्बर</li>
-            <li><strong>करियर की शुरुआत:</strong> कानपुर, उत्तर प्रदेश</li>
-            <li><strong>पहचान:</strong> पत्रकार, लेखक और वक्ता</li>
-            <li><strong>सम्मान:</strong> पत्रकार रत्न अवॉर्ड</li>
+            <li><strong>Position:</strong> Chairman, MD & Editor-in-Chief, UPtvLIVE</li>
+            <li><strong>Date of Birth:</strong> 17 September</li>
+            <li><strong>Career Started From:</strong> Kanpur, Uttar Pradesh</li>
+            <li><strong>Identity:</strong> Journalist, Author & Speaker</li>
+            <li><strong>Award:</strong> Journalist Ratna Award</li>
           </ul>
 
-          <h2>पत्रकारिता का दृष्टिकोण</h2>
+          <h2>Journalism Philosophy</h2>
           <p>
-            अभय त्रिपाठी “Less Views, More News” के सिद्धांत पर काम करते हैं।
-            उनका मानना है कि पत्रकारिता का उद्देश्य केवल TRP या व्यूज हासिल करना नहीं,
-            बल्कि समाज को सटीक, निष्पक्ष और सार्थक जानकारी देना होना चाहिए।
+            Abhay Tripathi follows the principle of <strong>"Less Views, More News"</strong>.
+            He believes that journalism should not be about chasing TRP or views,
+            but about delivering accurate, unbiased, and meaningful information to society.
           </p>
 
           <p>
-            इसी सोच के साथ वे UPtvLIVE को एक “वैचारिक आंदोलन” के रूप में आगे बढ़ा रहे हैं।
+            With this vision, he is leading UPtvLIVE as a “thought-driven movement”
+            in the field of journalism.
           </p>
 
         </div>
@@ -97,51 +99,51 @@ const About = () => {
         {/* MISSION */}
         <h2>Mission</h2>
         <p>
-          UPtvLIVE का मिशन निष्पक्ष और सच्ची पत्रकारिता को बढ़ावा देना है।
-          हम फेक न्यूज़ के खिलाफ जागरूकता फैलाने और आम जनता की आवाज़ को
-          एक मजबूत मंच देने के लिए प्रतिबद्ध हैं।
+          UPtvLIVE’s mission is to promote unbiased and truthful journalism.
+          We are committed to spreading awareness against fake news and giving
+          a strong platform to the voice of the people.
         </p>
 
         {/* WHAT WE COVER */}
         <h2>What We Cover</h2>
-        <p>UPtvLIVE पर आपको मिलेंगी:</p>
+        <p>On UPtvLIVE, you will find:</p>
         <ul>
-          <li>उत्तर प्रदेश की ताज़ा खबरें</li>
-          <li>कानपुर, लखनऊ और अन्य शहरों की लोकल न्यूज़</li>
-          <li>राजनीति और प्रशासन की हर अपडेट</li>
-          <li>क्राइम न्यूज़ और जांच आधारित रिपोर्ट</li>
-          <li>शिक्षा, रोजगार और सरकारी योजनाएं</li>
-          <li>राष्ट्रीय और अंतरराष्ट्रीय समाचार</li>
-          <li>धर्म, संस्कृति और सामाजिक मुद्दे</li>
+          <li>Latest news from Uttar Pradesh</li>
+          <li>Local news from Kanpur, Lucknow, and other cities</li>
+          <li>Political and administrative updates</li>
+          <li>Crime news and investigative reports</li>
+          <li>Education, jobs, and government schemes</li>
+          <li>National and international news</li>
+          <li>Religion, culture, and social issues</li>
         </ul>
 
         {/* WHY CHOOSE US */}
         <h2>Why Choose Us</h2>
         <ul>
-          <li>तेज़ और ब्रेकिंग न्यूज़ अपडेट</li>
-          <li>ग्राउंड रिपोर्टिंग और एक्सक्लूसिव खबरें</li>
-          <li>निष्पक्ष और तथ्य आधारित पत्रकारिता</li>
-          <li>सरल और स्पष्ट हिंदी भाषा</li>
+          <li>Fast and breaking news updates</li>
+          <li>Ground reporting and exclusive stories</li>
+          <li>Unbiased and fact-based journalism</li>
+          <li>Simple and clear language</li>
         </ul>
 
         {/* TEAM */}
         <h2>Our Team</h2>
         <p>
-          UPtvLIVE की टीम में अनुभवी पत्रकार और रिपोर्टर शामिल हैं जो
-          चौबीसों घंटे खबरों को कवर करने के लिए काम कर रहे हैं।
+          The UPtvLIVE team consists of experienced journalists and reporters
+          who work 24/7 to cover news from every corner.
         </p>
 
         {/* CONTACT */}
         <h2>Contact Us</h2>
         <p>📧 Email: editorpvnews@gmail.com</p>
-        <p>📞 Phone: 9335690008</p>
-        <p>📍 Address: Gandhi Nagar, Kanpur Nagar, Uttar Pradesh</p>
+        <p>📞 Phone: +91 9335690008</p>
+        <p>📍 Address: UPTVLIVE Head Office,Gandhi Nagar, Kanpur Nagar, Uttar Pradesh | Pin Code:208002</p>
 
         {/* COMMITMENT */}
         <h2>Commitment</h2>
         <p>
-          UPtvLIVE अपने पाठकों को सही, संतुलित और विश्वसनीय जानकारी देने के लिए प्रतिबद्ध है।
-          हमारा उद्देश्य समाज को जागरूक बनाना और सही जानकारी के माध्यम से लोगों को सशक्त करना है।
+          UPtvLIVE is committed to providing accurate, balanced, and reliable information.
+          Our goal is to create an aware society and empower people through truthful news.
         </p>
 
       </div>

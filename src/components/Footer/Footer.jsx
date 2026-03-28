@@ -72,7 +72,7 @@ function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Gandhi Nagar, Kanpur Nagar, Uttar Pradesh
+                UPTVLIVE Head Office,Gandhi Nagar, Kanpur Nagar, Uttar Pradesh | Pin Code:208002
               </a>
             </p>
 
