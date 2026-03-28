@@ -10,31 +10,47 @@ const ArticlePage = () => {
     return <h2 style={{ padding: "20px" }}>Article Not Found</h2>;
   }
 
-  // 🔥 Related News (excluding current)
+  // 🔥 SHARE DATA
+  const shareUrl = window.location.href;
+  const shareText = article.title;
+
+  // 🔥 RELATED NEWS
   const relatedNews = newsData
     .filter((n) => n.slug !== slug)
     .slice(0, 4);
 
+  // 🔥 NATIVE SHARE (MOBILE)
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: article.title,
+        url: shareUrl,
+      });
+    } else {
+      alert("Sharing not supported on this device");
+    }
+  };
+
   return (
-    <div className="container" style={{ padding: "20px", maxWidth: "900px" }}>
+    <div className="container" style={{ padding: "15px", maxWidth: "900px" }}>
 
       {/* 🔙 BACK */}
       <Link to="/" style={{ color: "#d60000", textDecoration: "none" }}>
         ← होम पर जाएं
       </Link>
 
-      {/* 🏷 CATEGORY + CITY */}
+      {/* 🏷 CATEGORY */}
       <p style={{ marginTop: "10px", color: "#d60000", fontWeight: "bold" }}>
         {article.category} | {article.city}
       </p>
 
       {/* 📰 TITLE */}
-      <h1 style={{ margin: "10px 0", fontSize: "28px", lineHeight: "1.4" }}>
+      <h1 style={{ margin: "10px 0", fontSize: "26px", lineHeight: "1.4" }}>
         {article.title}
       </h1>
 
       {/* ⏰ META */}
-      <p style={{ color: "gray", marginBottom: "15px" }}>
+      <p style={{ color: "gray", marginBottom: "12px" }}>
         ⏰ {article.time} • 👁 {article.views}
       </p>
 
@@ -46,38 +62,76 @@ const ArticlePage = () => {
           width: "100%",
           maxHeight: "420px",
           objectFit: "cover",
-          borderRadius: "8px"
+          borderRadius: "10px"
         }}
       />
 
       {/* 📤 SHARE BUTTONS */}
-      <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
+      <div style={{ marginTop: "15px", display: "flex", gap: "10px", flexWrap: "wrap" }}>
+
+        {/* WHATSAPP */}
         <a
-          href={`https://wa.me/?text=${article.title}`}
+          href={`https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`}
           target="_blank"
           rel="noreferrer"
-          style={{ background: "#25D366", color: "#fff", padding: "6px 12px", borderRadius: "4px", textDecoration: "none" }}
+          style={{
+            background: "#25D366",
+            color: "#fff",
+            padding: "8px 14px",
+            borderRadius: "6px",
+            textDecoration: "none"
+          }}
         >
           WhatsApp
         </a>
 
+        {/* FACEBOOK */}
         <a
-          href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
           target="_blank"
           rel="noreferrer"
-          style={{ background: "#1877f2", color: "#fff", padding: "6px 12px", borderRadius: "4px", textDecoration: "none" }}
+          style={{
+            background: "#1877f2",
+            color: "#fff",
+            padding: "8px 14px",
+            borderRadius: "6px",
+            textDecoration: "none"
+          }}
         >
           Facebook
         </a>
 
+        {/* X */}
         <a
-          href={`https://twitter.com/intent/tweet?text=${article.title}`}
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
           target="_blank"
           rel="noreferrer"
-          style={{ background: "#000", color: "#fff", padding: "6px 12px", borderRadius: "4px", textDecoration: "none" }}
+          style={{
+            background: "#000",
+            color: "#fff",
+            padding: "8px 14px",
+            borderRadius: "6px",
+            textDecoration: "none"
+          }}
         >
           X
         </a>
+
+        {/* 📱 NATIVE SHARE */}
+        <button
+          onClick={handleShare}
+          style={{
+            background: "#ff9800",
+            color: "#fff",
+            padding: "8px 14px",
+            borderRadius: "6px",
+            border: "none",
+            cursor: "pointer"
+          }}
+        >
+          Share
+        </button>
+
       </div>
 
       {/* 📖 CONTENT */}
@@ -85,7 +139,7 @@ const ArticlePage = () => {
         style={{
           marginTop: "20px",
           lineHeight: "1.9",
-          fontSize: "17px",
+          fontSize: "16px",
           color: "#222"
         }}
       >
@@ -98,20 +152,32 @@ const ArticlePage = () => {
           🔥 संबंधित खबरें
         </h3>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "15px", marginTop: "15px" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "12px",
+            marginTop: "15px"
+          }}
+        >
           {relatedNews.map((item) => (
             <Link
               key={item.id}
               to={`/article/${item.slug}`}
               style={{ textDecoration: "none", color: "#000" }}
             >
-              <div style={{ display: "flex", gap: "10px" }}>
+              <div style={{ display: "flex", gap: "8px" }}>
                 <img
                   src={item.image}
                   alt=""
-                  style={{ width: "80px", height: "60px", objectFit: "cover", borderRadius: "4px" }}
+                  style={{
+                    width: "80px",
+                    height: "60px",
+                    objectFit: "cover",
+                    borderRadius: "5px"
+                  }}
                 />
-                <p style={{ fontSize: "14px" }}>{item.title}</p>
+                <p style={{ fontSize: "13px" }}>{item.title}</p>
               </div>
             </Link>
           ))}
